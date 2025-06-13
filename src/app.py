@@ -23,7 +23,6 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-
 # Async call to MCP
 async def call_agent(question: str, user_id: str):
     client = Client("http://127.0.0.1:8005/sse")
@@ -32,7 +31,6 @@ async def call_agent(question: str, user_id: str):
             "multi_analyst", {"question": question, "user_id": user_id}
         )
         return result[0].text if result and hasattr(result[0], "text") else str(result)
-
 
 # Chat input
 if prompt := st.chat_input("Ask me anything ..."):
