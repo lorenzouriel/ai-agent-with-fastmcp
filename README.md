@@ -35,7 +35,7 @@ SUPABASE_ACCESS_TOKEN=your-supabase-access-token
 
 ### 4. Start the FastMCP Server
 ```bash
-python run src/mcp_server.py
+python src/mcp_server.py
 ```
 
 This runs the backend multi-agent system on:
